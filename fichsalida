@@ -1,0 +1,15 @@
+[10:32:41] [Server thread/INFO]: Starting minecraft server version 1.8
+[10:32:42] [Server thread/INFO]: Loading properties
+[10:32:42] [Server thread/INFO]: Default game type: SURVIVAL
+[10:32:42] [Server thread/INFO]: Generating keypair
+[10:32:43] [Server thread/INFO]: Starting Minecraft server on *:25565
+[10:32:43] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[10:32:43] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[10:32:43] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[10:32:43] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[10:32:43] [Server thread/INFO]: Preparing level "supervivencia"
+[10:32:43] [Server thread/INFO]: Preparing start region for level 0
+[10:32:44] [Server thread/INFO]: Preparing spawn area: 30%
+[10:32:44] [Server thread/INFO]: Done (1.738s)! For help, type "help" or "?"
+[10:33:52] [Server Watchdog/FATAL]: A single server tick took 66.47 seconds (should be max 0.05)
+[10:33:52] [Server Watchdog/FATAL]: Considering it to be crashed, server will forcibly shutdown.

@@ -1,0 +1,176 @@
+---- Minecraft Crash Report ----
+// Everything's going to plan. No, really, that was supposed to happen.
+
+Time: 10/29/14 10:08 PM
+Description: Watching Server
+
+java.lang.Error
+	at sun.misc.Unsafe.compareAndSwapObject(Native Method)
+	at java.util.concurrent.atomic.AtomicReference.compareAndSet(AtomicReference.java:114)
+	at java.util.concurrent.atomic.AtomicReference.getAndSet(AtomicReference.java:142)
+	at io.netty.util.internal.MpscLinkedQueue.replaceTail(MpscLinkedQueue.java:106)
+	at io.netty.util.internal.MpscLinkedQueue.offer(MpscLinkedQueue.java:145)
+	at io.netty.util.internal.MpscLinkedQueue.add(MpscLinkedQueue.java:242)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.addTask(SingleThreadEventExecutor.java:314)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.execute(SingleThreadEventExecutor.java:718)
+	at io.netty.channel.AbstractChannelHandlerContext.safeExecute(AbstractChannelHandlerContext.java:883)
+	at io.netty.channel.AbstractChannelHandlerContext.flush(AbstractChannelHandlerContext.java:679)
+	at io.netty.channel.DefaultChannelPipeline.flush(DefaultChannelPipeline.java:838)
+	at io.netty.channel.AbstractChannel.flush(AbstractChannel.java:189)
+	at gr.a(SourceFile:190)
+	at rc.c(SourceFile:151)
+	at net.minecraft.server.MinecraftServer.z(SourceFile:625)
+	at po.z(SourceFile:305)
+	at net.minecraft.server.MinecraftServer.y(SourceFile:531)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:447)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at sun.misc.Unsafe.compareAndSwapObject(Native Method)
+	at java.util.concurrent.atomic.AtomicReference.compareAndSet(AtomicReference.java:114)
+	at java.util.concurrent.atomic.AtomicReference.getAndSet(AtomicReference.java:142)
+	at io.netty.util.internal.MpscLinkedQueue.replaceTail(MpscLinkedQueue.java:106)
+	at io.netty.util.internal.MpscLinkedQueue.offer(MpscLinkedQueue.java:145)
+	at io.netty.util.internal.MpscLinkedQueue.add(MpscLinkedQueue.java:242)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.addTask(SingleThreadEventExecutor.java:314)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.execute(SingleThreadEventExecutor.java:718)
+	at io.netty.channel.AbstractChannelHandlerContext.safeExecute(AbstractChannelHandlerContext.java:883)
+	at io.netty.channel.AbstractChannelHandlerContext.flush(AbstractChannelHandlerContext.java:679)
+	at io.netty.channel.DefaultChannelPipeline.flush(DefaultChannelPipeline.java:838)
+	at io.netty.channel.AbstractChannel.flush(AbstractChannel.java:189)
+	at gr.a(SourceFile:190)
+	at rc.c(SourceFile:151)
+	at net.minecraft.server.MinecraftServer.z(SourceFile:625)
+	at po.z(SourceFile:305)
+	at net.minecraft.server.MinecraftServer.y(SourceFile:531)
+
+-- Thread Dump --
+Details:
+	Threads: "Netty Server IO #1" Id=19 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@45a79589
+	-  locked java.util.Collections$UnmodifiableSet@2c5069d4
+	-  locked sun.nio.ch.EPollSelectorImpl@795e6aa7
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:618)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:306)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"File IO Thread" Id=24 RUNNABLE
+	at java.io.ByteArrayOutputStream.<init>(ByteArrayOutputStream.java:77)
+	at bfw.<init>(SourceFile:229)
+	at bfv.b(SourceFile:218)
+	at bfx.d(SourceFile:94)
+	at bfy.a(SourceFile:160)
+	at bfy.c(SourceFile:150)
+	at brp.c(SourceFile:37)
+	at brp.run(SourceFile:30)
+	...
+
+
+"Server Watchdog" Id=22 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:446)
+	at pt.run(SourceFile:43)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Netty Server IO #0" Id=18 RUNNABLE
+	at sun.misc.Unsafe.allocateMemory(Native Method)
+	at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:127)
+	at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:306)
+	at io.netty.buffer.UnpooledUnsafeDirectByteBuf.allocateDirect(UnpooledUnsafeDirectByteBuf.java:108)
+	at io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>(UnpooledUnsafeDirectByteBuf.java:69)
+	at io.netty.buffer.UnpooledByteBufAllocator.newDirectBuffer(UnpooledByteBufAllocator.java:50)
+	at io.netty.buffer.AbstractByteBufAllocator.directBuffer(AbstractByteBufAllocator.java:155)
+	at io.netty.buffer.AbstractByteBufAllocator.directBuffer(AbstractByteBufAllocator.java:146)
+	...
+
+
+"Server console handler" Id=15 RUNNABLE (in native)
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:272)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:273)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:334)
+	-  locked java.io.BufferedInputStream@62528fb0
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:283)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:325)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:177)
+	-  locked java.io.InputStreamReader@6e5605f4
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	...
+
+
+"DestroyJavaVM" Id=14 RUNNABLE
+
+
+"Server thread" Id=12 RUNNABLE
+	at sun.misc.Unsafe.compareAndSwapObject(Native Method)
+	at java.util.concurrent.atomic.AtomicReference.compareAndSet(AtomicReference.java:114)
+	at java.util.concurrent.atomic.AtomicReference.getAndSet(AtomicReference.java:142)
+	at io.netty.util.internal.MpscLinkedQueue.replaceTail(MpscLinkedQueue.java:106)
+	at io.netty.util.internal.MpscLinkedQueue.offer(MpscLinkedQueue.java:145)
+	at io.netty.util.internal.MpscLinkedQueue.add(MpscLinkedQueue.java:242)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.addTask(SingleThreadEventExecutor.java:314)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.execute(SingleThreadEventExecutor.java:718)
+	...
+
+
+"Server Infinisleeper" Id=11 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at pp.run(SourceFile:64)
+
+
+"Snooper Timer" Id=10 TIMED_WAITING on java.util.TaskQueue@24d04e13
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@24d04e13
+	at java.util.TimerThread.mainLoop(Timer.java:552)
+	at java.util.TimerThread.run(Timer.java:505)
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@67b5d446
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@67b5d446
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:151)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@528374db
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@528374db
+	at java.lang.Object.wait(Object.java:503)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:133)
+
+
+
+Stacktrace:
+	at pt.run(SourceFile:59)
+	at java.lang.Thread.run(Thread.java:745)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8
+	Operating System: Linux (amd64) version 3.14.20-20.44.amzn1.x86_64
+	Java Version: 1.7.0_71, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 446264528 bytes (425 MB) / 810942464 bytes (773 MB) up to 810942464 bytes (773 MB)
+	JVM Flags: 2 total; -Xmx800M -Xms800M
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 20; [qw['Truji92'/39250, l='supervivencia', x=150.61, y=70.00, z=235.52]]
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)
