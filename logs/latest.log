@@ -1,15 +1,1 @@
-[02:03:43] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 5076ms behind, skipping 101 tick(s)
-[02:20:19] [Server console handler/ERROR]: Exception handling console input
-java.io.IOException: Input/output error
-	at java.io.FileInputStream.readBytes(Native Method) ~[?:1.7.0_71]
-	at java.io.FileInputStream.read(FileInputStream.java:272) ~[?:1.7.0_71]
-	at java.io.BufferedInputStream.read1(BufferedInputStream.java:273) ~[?:1.7.0_71]
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:334) ~[?:1.7.0_71]
-	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:283) ~[?:1.7.0_71]
-	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:325) ~[?:1.7.0_71]
-	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:177) ~[?:1.7.0_71]
-	at java.io.InputStreamReader.read(InputStreamReader.java:184) ~[?:1.7.0_71]
-	at java.io.BufferedReader.fill(BufferedReader.java:154) ~[?:1.7.0_71]
-	at java.io.BufferedReader.readLine(BufferedReader.java:317) ~[?:1.7.0_71]
-	at java.io.BufferedReader.readLine(BufferedReader.java:382) ~[?:1.7.0_71]
-	at pq.run(SourceFile:80) [minecraft_server.1.8.jar:?]
+[13:55:32] [Server Shutdown Thread/INFO]: Stopping server
