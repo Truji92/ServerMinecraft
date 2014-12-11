@@ -1,1 +1,38 @@
-[13:55:32] [Server Shutdown Thread/INFO]: Stopping server
+[15:46:01] [Server thread/INFO]: Starting minecraft server version 1.8
+[15:46:01] [Server thread/INFO]: Loading properties
+[15:46:01] [Server thread/INFO]: Default game type: SURVIVAL
+[15:46:01] [Server thread/INFO]: Generating keypair
+[15:46:01] [Server thread/INFO]: Starting Minecraft server on *:25565
+[15:46:01] [Server thread/INFO]: Preparing level "CoopConCesar"
+[15:46:01] [Server thread/INFO]: Preparing start region for level 0
+[15:46:02] [Server thread/INFO]: Preparing spawn area: 25%
+[15:46:03] [Server thread/INFO]: Done (1.923s)! For help, type "help" or "?"
+[15:46:26] [User Authenticator #1/INFO]: UUID of player Truji92 is 0092060e-aa5a-44e1-abe1-72868141325d
+[15:46:26] [Server thread/INFO]: Truji92[/2.138.160.92:65418] logged in with entity id 274 at (584.0425144023199, 64.0, 535.655485030702)
+[15:46:26] [Server thread/INFO]: Truji92 joined the game
+[15:49:24] [User Authenticator #2/INFO]: UUID of player caenrique93 is 3d3ebecf-ba12-43b5-87e3-687e70f3307e
+[15:49:24] [Server thread/INFO]: caenrique93[/79.108.27.236:55963] logged in with entity id 3842 at (244.65630253998964, 74.94678770635748, -110.18475775314859)
+[15:49:24] [Server thread/INFO]: caenrique93 joined the game
+[15:49:26] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2168ms behind, skipping 43 tick(s)
+[15:56:41] [Server thread/INFO]: [Truji92: Set own game mode to Spectator Mode]
+[15:59:20] [Server thread/INFO]: [Truji92: Set own game mode to Survival Mode]
+[15:59:27] [Server thread/INFO]: [caenrique93: Teleported caenrique93 to 73.5, 70.0, 73.5]
+[15:59:34] [Server thread/INFO]: [Truji92: Teleported Truji92 to 73.5, 70.0, 73.5]
+[16:00:00] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 25205ms behind, skipping 504 tick(s)
+[16:00:00] [Server thread/INFO]: [caenrique93: Set own game mode to Survival Mode]
+[16:00:01] [Server thread/WARN]: caenrique93 was kicked for floating too long!
+[16:00:07] [Server thread/WARN]: caenrique93 was kicked for floating too long!
+[16:00:08] [Server thread/WARN]: caenrique93 was kicked for floating too long!
+[16:00:09] [Server thread/INFO]: caenrique93 lost connection: TextComponent{text='Flying is not enabled on this server', siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null, insertion=null}}
+[16:00:09] [Server thread/INFO]: caenrique93 left the game
+[16:00:12] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 11673ms behind, skipping 233 tick(s)
+[16:00:19] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2594ms behind, skipping 51 tick(s)
+[16:00:33] [User Authenticator #3/INFO]: UUID of player caenrique93 is 3d3ebecf-ba12-43b5-87e3-687e70f3307e
+[16:00:34] [Server thread/INFO]: caenrique93[/79.108.27.236:55975] logged in with entity id 8650 at (73.46765412713486, 71.49177665934187, 78.27983068198195)
+[16:00:35] [Server thread/INFO]: caenrique93 joined the game
+[16:00:53] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 11110ms behind, skipping 222 tick(s)
+[16:01:05] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4220ms behind, skipping 84 tick(s)
+[16:02:07] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 34547ms behind, skipping 690 tick(s)
+[16:02:11] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4438ms behind, skipping 88 tick(s)
+[16:03:27] [Server Watchdog/FATAL]: A single server tick took 60.10 seconds (should be max 0.05)
+[16:03:28] [Server Watchdog/FATAL]: Considering it to be crashed, server will forcibly shutdown.
